@@ -18,7 +18,7 @@ def main():
     
     while True:
         # Read envelope with address
-        [address, contents] = subscriber.recv_multipart()
+        address, contents = subscriber.recv_multipart()
         print("[%s] %s\n" % (address, contents))
     
     # We never get here but clean up anyhow
